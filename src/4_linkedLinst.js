@@ -22,6 +22,7 @@ class OwnLinkedList {
       current.next = new Node(value);
     }
     this._length++;
+    return value;
   }
 
   queryAll() {
@@ -49,16 +50,8 @@ class OwnLinkedList {
       prev.next = current.next;
     }
     this._length--;
+    return value;
   }
 }
 
-let myOwnLinkedList = new OwnLinkedList();
-myOwnLinkedList.insert(1);
-myOwnLinkedList.insert(2);
-myOwnLinkedList.insert(3);
-myOwnLinkedList.insert(4);
-myOwnLinkedList.insert(5);
-
-myOwnLinkedList.delete(1);
-console.log(myOwnLinkedList.queryAll());
-console.log(myOwnLinkedList);
+module.exports = OwnLinkedList;
